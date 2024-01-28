@@ -48,7 +48,6 @@ def Aumenta_Cobra(Lista_Cobra):
     for XeY in Lista_Cobra:
         pygame.draw.rect(Tela, (0, 180, 0), (XeY[0], XeY[1], 20, 20))
 
-
 '''LAÇO DE REPETIÇÃO PARA MANTER A TELA DO JOGO ABERTA:'''
 while True:
     '''DEFININDO VELOCIDADE DO JOGO:'''

@@ -26,7 +26,7 @@ Som_Pontuação.set_volume(1)
 #JOGO
 '''CONFIGURAÇÕES DO JOGO:'''
 Fim_de_Jogo = False
-Dificuldade = 7
+Nivel_da_Dificuldade = 7
 Pontos = 0
 Maior_Pontuação = 0
 Fonte01 = pygame.font.SysFont('arial', 22, True, False)
@@ -52,7 +52,7 @@ def Aumenta_Cobra(Lista_Cobra):
 while True:
     '''DEFININDO VELOCIDADE DO JOGO:'''
     Velocidade_do_Jogo = pygame.time.Clock()
-    Velocidade_do_Jogo.tick(Dificuldade)
+    Velocidade_do_Jogo.tick(Nivel_da_Dificuldade)
 
     '''DEFININDO COR DE FUNDO:'''
     Tela.fill((167, 167, 167))
@@ -80,7 +80,7 @@ while True:
         Y_Maçã = randint(15, 467)
         Pontos = Pontos + 1
         Som_Pontuação.play()
-        Dificuldade = Dificuldade + 0.3
+        Nivel_da_Dificuldade = Nivel_da_Dificuldade + 0.3
         Comprimento_Inicial = Comprimento_Inicial + 1
     Lista_Cabeça = []
     Lista_Cabeça.append(X_Cobra)
@@ -116,10 +116,10 @@ while True:
         
     '''DEFININDO COMO O JOGO DEVERÁ RECOMEÇAR:'''
     def Reiniciar():
-        global Pontos, Dificuldade, Comprimento_Inicial, X_Cobra, Y_Cobra, Lista_Cobra, Lista_Cabeça, X_Maçã, Y_Maçã, Fim_de_Jogo
+        global Pontos, Nivel_da_Dificuldade, Comprimento_Inicial, X_Cobra, Y_Cobra, Lista_Cobra, Lista_Cabeça, X_Maçã, Y_Maçã, Fim_de_Jogo
         Fim_de_Jogo = False
         Pontos = 0
-        Dificuldade = 7
+        Nivel_da_Dificuldade = 7
         Comprimento_Inicial = 3
         X_Cobra = Largura//2
         Y_Cobra = Altura//2
